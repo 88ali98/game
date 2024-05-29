@@ -1,7 +1,10 @@
 import random
 import word_list
 import ui
+import registr
 
+def reg():
+    word = registr()
 def play_game():
     word = word_list.get_random_word()
     jumbled_word = "".join(random.sample(word, len(word)))
@@ -17,5 +20,4 @@ def play_game():
         else:
             ui.display_result("неправильное слово попровуй сново")
 
-if __name__ == "__main__":
-    play_game()
+play_game()
